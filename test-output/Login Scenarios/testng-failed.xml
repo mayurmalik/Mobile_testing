@@ -4,7 +4,7 @@
   <parameter name="app" value="com.llamalab.automate_199_apps.evozi.com.apk"/>
   <parameter name="device" value="emulator-5556"/>
   <listeners>
-    <listener class-name="utils.listeners_implementation"/>
+    <listener class-name="utils.ListenersImplementation"/>
   </listeners>
   <test thread-count="5" name="Login Tests">
     <classes>

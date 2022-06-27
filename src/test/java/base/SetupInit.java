@@ -35,6 +35,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentTest;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -128,29 +129,9 @@ public class SetupInit extends CommonConstants {
 	}
 
 	@AfterMethod(alwaysRun = true)
-	public void tearDown(ITestResult testResult) {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
-			ExtentTest logger = ListenersImplementation.logger;
-			logger.fail(testResult.getName() + " test is failed");
+	public void tearDown() {
 
-			try {
-				logger.addScreenCaptureFromBase64String(takeScreenShot());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-
-			finally {
-				ExtentReport.extent.flush();
-				this.mobileDriver.quit();
-			}
-
-		}
-
-		else {
-			ExtentReport.extent.flush();
-			this.mobileDriver.quit();
-		}
-
+		this.mobileDriver.quit();
 	}
 
 	public void captureVideo(AndroidDriver<MobileElement> driver) {
@@ -512,29 +493,16 @@ public class SetupInit extends CommonConstants {
 	}
 
 	// added new method for taking screenshot
-	public String takeScreenShot() throws IOException {
+	public String takeScreenShot(MobileDriver<MobileElement> driver) throws IOException {
 
-		TakesScreenshot screenshot = (TakesScreenshot) mobileDriver;
+		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
 		String destination = "./test-results/screenshots/" + System.currentTimeMillis() + ".png";
 		File finalDestination = new File(destination);
 
 		FileUtils.copyFile(source, finalDestination);
 
-		String encodedBase64 = null;
-		try {
-			@SuppressWarnings("resource")
-			FileInputStream fileInputStream = new FileInputStream(finalDestination);
-			byte[] bytes = new byte[(int) finalDestination.length()];
-			fileInputStream.read(bytes);
-			encodedBase64 = Base64.getEncoder().encodeToString(bytes);
-
-		} catch (FileNotFoundException e) {
-			System.out.println("Capture failed" + e.getMessage());
-
-		}
-
-		return encodedBase64;
+		return destination;
 
 	}
 }

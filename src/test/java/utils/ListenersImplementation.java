@@ -1,10 +1,20 @@
 package utils;
 
+import java.io.IOException;
+
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.Media;
+
+import base.CommonConstants;
 import base.SetupInit;
+import io.appium.java_client.MobileDriver;
+
 
 public class ListenersImplementation extends SetupInit implements ITestListener {
 
@@ -30,12 +40,15 @@ public class ListenersImplementation extends SetupInit implements ITestListener 
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-
-//		logger.addScreenCaptureFromPath(takeScreenShot(), result.getTestName() +" test is failed" );
-//			
-//		ExtentReport.extent.flush();
-//				
-
+		try {
+            Media mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(System.getProperty("user.dir")+"/"+takeScreenShot((MobileDriver)result.getTestContext().getAttribute("MobileDriver"))).build();
+			logger.log(Status.FAIL, result.getName()+ "testcase is failed", mediaModel);
+        } catch (IOException e) {
+           
+            e.printStackTrace();
+        }
+       
+        ExtentReport.extent.flush();
 	}
 
 	@Override

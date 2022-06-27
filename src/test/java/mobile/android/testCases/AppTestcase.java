@@ -1,6 +1,8 @@
 package mobile.android.testCases;
 
 import java.util.Map;
+
+import org.testng.ITestContext;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
@@ -16,8 +18,9 @@ public class AppTestcase extends SetupInit {
 
 	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod(ITestContext context) {
 		co = new CreateObject(getMobileDriver());
+		context.setAttribute("MobileDriver", this.mobileDriver);
 
 	}
 
