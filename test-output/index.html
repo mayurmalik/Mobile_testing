@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Login_Scenarios">
+              <span class="suite-name border-failed">Login Scenarios</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Login_Scenarios">
+                    <span>C:\Users\MAYUR MALIK\Downloads\mobile_framework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Login_Scenarios">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Login_Scenarios">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Login_Scenarios">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Login_Scenarios">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Login_Scenarios">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Login_Scenarios">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Login_Scenarios" class="hide-methods failed suite-Login_Scenarios"> (hide)</a> <!-- hide-methods failed suite-Login_Scenarios -->
+                      <a href="#" panel-name="suite-Login_Scenarios" class="show-methods failed suite-Login_Scenarios"> (show)</a> <!-- show-methods failed suite-Login_Scenarios -->
+                    </span>
+                    <div class="method-list-content failed suite-Login_Scenarios">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="ScreenhotValidation">ScreenhotValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Login_Scenarios -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Login_Scenarios" class="hide-methods passed suite-Login_Scenarios"> (hide)</a> <!-- hide-methods passed suite-Login_Scenarios -->
+                      <a href="#" panel-name="suite-Login_Scenarios" class="show-methods passed suite-Login_Scenarios"> (show)</a> <!-- show-methods passed suite-Login_Scenarios -->
+                    </span>
+                    <div class="method-list-content passed suite-Login_Scenarios">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="contextValidation">contextValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="sideMenuOption">sideMenuOption</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="themeValidation">themeValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Login_Scenarios" title="mobile.android.testCases.AppTestcase" hash-for-method="versionValidation">versionValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Login_Scenarios -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Login_Scenarios" class="panel Login_Scenarios">
+          <div class="suite-Login_Scenarios-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">mobile.android.testCases.AppTestcase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ScreenhotValidation">
+                  </a> <!-- ScreenhotValidation -->
+                  <span class="method-name">ScreenhotValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError
+	at mobile.android.testCases.AppTestcase.ScreenhotValidation(AppTestcase.java:116)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Scenarios-class-failed -->
+          <div class="suite-Login_Scenarios-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mobile.android.testCases.AppTestcase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contextValidation">
+                  </a> <!-- contextValidation -->
+                  <span class="method-name">contextValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sideMenuOption">
+                  </a> <!-- sideMenuOption -->
+                  <span class="method-name">sideMenuOption</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="themeValidation">
+                  </a> <!-- themeValidation -->
+                  <span class="method-name">themeValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="versionValidation">
+                  </a> <!-- versionValidation -->
+                  <span class="method-name">versionValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Login_Scenarios-class-passed -->
+        </div> <!-- panel Login_Scenarios -->
+        <div panel-name="test-xml-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\MAYUR MALIK\Downloads\mobile_framework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Login Scenarios&quot; parallel=&quot;none&quot;&gt;
+  &lt;parameter name=&quot;app&quot; value=&quot;com.llamalab.automate_199_apps.evozi.com.apk&quot;/&gt;
+  &lt;parameter name=&quot;device&quot; value=&quot;emulator-5556&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utils.listeners_implementation&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login Tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;mobile.android.testCases.AppTestcase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Tests --&gt;
+  &lt;test name=&quot;Login Tests(failed)&quot; parallel=&quot;none&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;mobile.android.testCases.AppTestcase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;ScreenhotValidation&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+          &lt;include name=&quot;beforeMethod&quot;/&gt;
+          &lt;include name=&quot;initializeSetupInit&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- mobile.android.testCases.AppTestcase --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Tests(failed) --&gt;
+&lt;/suite&gt; &lt;!-- Login Scenarios --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Login Scenarios</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Login Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Login Tests(failed) (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Login Scenarios</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Login Scenarios</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Login_Scenarios');
+function tableData_Login_Scenarios() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(6);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'versionValidation')
+data.setCell(0, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(0, 3, 16608);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ScreenhotValidation')
+data.setCell(1, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(1, 3, 13444);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'themeValidation')
+data.setCell(2, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(2, 3, 7837);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'contextValidation')
+data.setCell(3, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(3, 3, 4353);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'test')
+data.setCell(4, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(4, 3, 2940);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'sideMenuOption')
+data.setCell(5, 2, 'mobile.android.testCases.AppTestcase')
+data.setCell(5, 3, 2771);
+window.suiteTableData['Login_Scenarios']= { tableData: data, tableDiv: 'times-div-Login_Scenarios'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <div id="times-div-Login_Scenarios">
+              </div> <!-- times-div-Login_Scenarios -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Login Scenarios</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Login_Scenarios" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">mobile.android.testCases.AppTestcase</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">12874 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">12881 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=test status=SUCCESS method=AppTestcase.test()[pri:0, instance:mobile.android.testCa...)</span>
+                <span class="method-start">16290 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">17144 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">29043 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sideMenuOption</span>
+                <span class="method-start">29043 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=sideMenuOption status=SUCCESS method=AppTestcase.sideMenuOption()[pri:1, instance:m...)</span>
+                <span class="method-start">31909 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">32729 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">44528 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">contextValidation</span>
+                <span class="method-start">44528 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=contextValidation status=SUCCESS method=AppTestcase.contextValidation()[pri:2, inst...)</span>
+                <span class="method-start">48934 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">49899 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">61797 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">themeValidation</span>
+                <span class="method-start">61797 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=themeValidation status=SUCCESS method=AppTestcase.themeValidation()[pri:3, instance...)</span>
+                <span class="method-start">69694 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">70415 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">82272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">versionValidation</span>
+                <span class="method-start">82272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=versionValidation status=SUCCESS method=AppTestcase.versionValidation()[pri:4, inst...)</span>
+                <span class="method-start">98942 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeSetupInit(com.llamalab.automate_199_apps.evozi.com.apk, emulator-5556, org.testng.TestRunner@1e008f36)</span>
+                <span class="method-start">99688 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">111301 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ScreenhotValidation</span>
+                <span class="method-start">111302 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=ScreenhotValidation status=FAILURE method=AppTestcase.ScreenhotValidation()[pri:5, ...)</span>
+                <span class="method-start">124748 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Scenarios">
+	<parameter name="app"
+		value="com.llamalab.automate_199_apps.evozi.com.apk" />
+	<parameter name="device" value="emulator-5556" />
+	<listeners>
+		
+		<listener class-name="utils.ListenersImplementation" />
+
+	</listeners>
+	<test thread-count="5" name="Login Tests">
+		<classes>
+			<class name="mobile.android.testCases.AppTestcase" />
+			<!--<class name="mobile.android.testCases.BrowserTestcase" /> -->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
